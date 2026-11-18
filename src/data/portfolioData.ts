@@ -223,7 +223,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
 
 // Configurable social media links (set `url` to the verified profile URL when available)
 export const SOCIAL_LINKS: SocialLink[] = [
-  { id: 'linkedin', label: 'LinkedIn', url: null },
+  { id: 'linkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/in/shivsroy/' },
   { id: 'facebook', label: 'Facebook', url: null },
   { id: 'instagram', label: 'Instagram', url: null },
   { id: 'youtube', label: 'YouTube', url: null },
