@@ -6,22 +6,22 @@ function BrowserConceptPreview({ project }: { project: ProjectItem }) {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div className="overflow-hidden rounded-t-xl border-b border-[rgba(148,163,184,0.15)] bg-[#0B101D]">
+    <div className="overflow-hidden rounded-t-xl border-b border-slate-200 bg-slate-100 dark:border-[rgba(148,163,184,0.15)] dark:bg-[#0B101D]">
       {/* Browser Top Chrome */}
-      <div className="flex items-center justify-between border-b border-[rgba(148,163,184,0.12)] bg-[#101626] px-4 py-2.5">
+      <div className="flex items-center justify-between border-b border-slate-200 bg-slate-100 px-4 py-2.5 dark:border-[rgba(148,163,184,0.12)] dark:bg-[#101626]">
         <div className="flex items-center gap-1.5" aria-hidden="true">
-          <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-[#475569]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-[#475569]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-[#475569]" />
         </div>
-        <div className="mx-3 flex-1 truncate rounded-md bg-[#080B14] px-3 py-1 text-center font-mono text-[11px] text-[#94A3B8]">
+        <div className="mx-3 flex-1 truncate rounded-md border border-slate-200 bg-white px-3 py-1 text-center font-mono text-[11px] text-slate-600 dark:border-transparent dark:bg-[#080B14] dark:text-[#94A3B8]">
           https://{project.domainLabel}
         </div>
-        <span className="text-[11px] font-medium text-[#06B6D4]">Sample</span>
+        <span className="text-[11px] font-medium text-[#0891B2] dark:text-[#06B6D4]">Sample</span>
       </div>
 
       {/* Uploaded Website Screenshot Preview */}
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#0B101D]">
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100 dark:bg-[#0B101D]">
         {!imgError ? (
           <img
             src={project.screenshotSrc}
@@ -32,11 +32,13 @@ function BrowserConceptPreview({ project }: { project: ProjectItem }) {
             className="h-full w-full object-cover object-top transition-transform duration-200 group-hover:scale-[1.02]"
           />
         ) : (
-          <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-[#101626] to-[#151D2E] p-4 text-center">
-            <span className="font-display text-sm font-semibold text-[#F8FAFC]">
+          <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 p-4 text-center dark:from-[#101626] dark:to-[#151D2E]">
+            <span className="font-display text-sm font-semibold text-slate-900 dark:text-[#F8FAFC]">
               {project.title}
             </span>
-            <span className="mt-1 text-xs text-[#94A3B8]">{project.domainLabel}</span>
+            <span className="mt-1 text-xs text-slate-600 dark:text-[#94A3B8]">
+              {project.domainLabel}
+            </span>
           </div>
         )}
       </div>
@@ -48,16 +50,18 @@ export function ProjectsSection() {
   return (
     <section
       id="works"
-      className="border-b border-[rgba(148,163,184,0.12)] bg-[#080B14] py-20 lg:py-24"
+      className="border-b border-slate-200 bg-white py-20 dark:border-[rgba(148,163,184,0.12)] dark:bg-[#080B14] lg:py-24"
     >
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold tracking-wide text-[#06B6D4]">Portfolio</p>
-          <h2 className="font-display mt-2 text-balance text-3xl font-bold tracking-tight text-[#F8FAFC] sm:text-4xl">
+          <p className="text-sm font-semibold tracking-wide text-[#0891B2] dark:text-[#06B6D4]">
+            Portfolio
+          </p>
+          <h2 className="font-display mt-2 text-balance text-3xl font-bold tracking-tight text-slate-900 dark:text-[#F8FAFC] sm:text-4xl">
             Selected Projects &amp; Creative Work.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#94A3B8]">
+          <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-[#94A3B8]">
             Explore sample website concepts demonstrating how I approach digital experiences for
             different business industries.
           </p>
@@ -68,7 +72,7 @@ export function ProjectsSection() {
           {SAMPLE_PROJECTS.map((project) => (
             <article
               key={project.id}
-              className="group flex flex-col justify-between overflow-hidden rounded-xl border border-[rgba(148,163,184,0.15)] bg-[#151D2E] transition-transform duration-200 hover:-translate-y-1 hover:border-[#6366F1]/50"
+              className="group flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-transform duration-200 hover:-translate-y-1 hover:border-[#6366F1]/50 dark:border-[rgba(148,163,184,0.15)] dark:bg-[#151D2E] dark:shadow-none dark:hover:border-[#6366F1]/50"
             >
               <div>
                 <BrowserConceptPreview project={project} />
@@ -76,27 +80,27 @@ export function ProjectsSection() {
                 <div className="p-6">
                   {/* Unboxed Metadata Line: Sample Project · Category */}
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-medium">
-                    <span className="text-[#06B6D4]">{project.badge}</span>
-                    <span className="text-[#94A3B8]/50" aria-hidden="true">
+                    <span className="text-[#0891B2] dark:text-[#06B6D4]">{project.badge}</span>
+                    <span className="text-slate-400 dark:text-[#94A3B8]/50" aria-hidden="true">
                       ·
                     </span>
-                    <span className="text-[#94A3B8]">{project.category}</span>
+                    <span className="text-slate-600 dark:text-[#94A3B8]">{project.category}</span>
                   </div>
 
-                  <h3 className="font-display mt-2.5 text-xl font-bold text-[#F8FAFC]">
+                  <h3 className="font-display mt-2.5 text-xl font-bold text-slate-900 dark:text-[#F8FAFC]">
                     {project.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-relaxed text-[#94A3B8]">
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-[#94A3B8]">
                     {project.description}
                   </p>
 
                   {/* Key Features */}
-                  <ul className="mt-5 space-y-2 border-t border-[rgba(148,163,184,0.12)] pt-4">
+                  <ul className="mt-5 space-y-2 border-t border-slate-200 pt-4 dark:border-[rgba(148,163,184,0.12)]">
                     {project.features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-start gap-2.5 text-sm text-[#F8FAFC]/90"
+                        className="flex items-start gap-2.5 text-sm text-slate-700 dark:text-[#F8FAFC]/90"
                       >
                         <Check
                           className="mt-0.5 h-4 w-4 shrink-0 text-[#6366F1]"
@@ -110,12 +114,12 @@ export function ProjectsSection() {
               </div>
 
               {/* Card Action */}
-              <div className="border-t border-[rgba(148,163,184,0.12)] bg-[#101626]/60 px-6 py-4">
+              <div className="border-t border-slate-200 bg-slate-50 px-6 py-4 dark:border-[rgba(148,163,184,0.12)] dark:bg-[#101626]/60">
                 <a
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-[40px] w-full items-center justify-center gap-2 rounded-lg border border-[rgba(148,163,184,0.2)] bg-[#151D2E] px-4 py-2 text-sm font-medium text-[#F8FAFC] whitespace-nowrap transition-colors duration-150 hover:border-[#6366F1] hover:bg-[#6366F1] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06B6D4]"
+                  className="inline-flex min-h-[40px] w-full items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-900 whitespace-nowrap transition-colors duration-150 hover:border-[#6366F1] hover:bg-[#6366F1] hover:text-white dark:border-[rgba(148,163,184,0.2)] dark:bg-[#151D2E] dark:text-[#F8FAFC] dark:hover:border-[#6366F1] dark:hover:bg-[#6366F1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06B6D4]"
                 >
                   <span>View Live Demo</span>
                   <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

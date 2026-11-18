@@ -75,60 +75,62 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="border-b border-[rgba(148,163,184,0.12)] bg-[#101626]/55 py-20 lg:py-24"
+      className="border-b border-slate-200 bg-slate-50 py-20 dark:border-[rgba(148,163,184,0.12)] dark:bg-[#101626]/55 lg:py-24"
     >
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-12">
           {/* Left Column: Direct Contact Info & Primary Channels */}
           <div className="flex flex-col justify-between lg:col-span-5">
             <div>
-              <p className="text-sm font-semibold tracking-wide text-[#06B6D4]">Get in Touch</p>
-              <h2 className="font-display mt-2 text-balance text-3xl font-bold tracking-tight text-[#F8FAFC] sm:text-4xl">
+              <p className="text-sm font-semibold tracking-wide text-[#0891B2] dark:text-[#06B6D4]">
+                Get in Touch
+              </p>
+              <h2 className="font-display mt-2 text-balance text-3xl font-bold tracking-tight text-slate-900 dark:text-[#F8FAFC] sm:text-4xl">
                 Have an Idea? Let&apos;s Build Something Together.
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-[#94A3B8]">
+              <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-[#94A3B8]">
                 Looking for a website, web application, or digital branding solution? Share your
                 requirements and let&apos;s discuss your project.
               </p>
 
               {/* Direct Info List */}
-              <dl className="mt-8 space-y-4 border-t border-[rgba(148,163,184,0.15)] pt-6">
+              <dl className="mt-8 space-y-4 border-t border-slate-200 pt-6 dark:border-[rgba(148,163,184,0.15)]">
                 <div className="flex items-center gap-3.5">
-                  <dt className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[rgba(148,163,184,0.15)] bg-[#151D2E] text-[#818CF8]">
+                  <dt className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white text-[#4F46E5] dark:border-[rgba(148,163,184,0.15)] dark:bg-[#151D2E] dark:text-[#818CF8]">
                     <User className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">Name</span>
                   </dt>
                   <dd>
-                    <span className="block text-xs text-[#94A3B8]">Name</span>
-                    <span className="text-sm font-medium text-[#F8FAFC]">
+                    <span className="block text-xs text-slate-500 dark:text-[#94A3B8]">Name</span>
+                    <span className="text-sm font-medium text-slate-900 dark:text-[#F8FAFC]">
                       {CONTACT_INFO.fullName}
                     </span>
                   </dd>
                 </div>
 
                 <div className="flex items-center gap-3.5">
-                  <dt className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[rgba(148,163,184,0.15)] bg-[#151D2E] text-[#06B6D4]">
+                  <dt className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white text-[#0891B2] dark:border-[rgba(148,163,184,0.15)] dark:bg-[#151D2E] dark:text-[#06B6D4]">
                     <MapPin className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">Location</span>
                   </dt>
                   <dd>
-                    <span className="block text-xs text-[#94A3B8]">Location</span>
-                    <span className="text-sm font-medium text-[#F8FAFC]">
+                    <span className="block text-xs text-slate-500 dark:text-[#94A3B8]">Location</span>
+                    <span className="text-sm font-medium text-slate-900 dark:text-[#F8FAFC]">
                       {CONTACT_INFO.location}
                     </span>
                   </dd>
                 </div>
 
                 <div className="flex items-center gap-3.5">
-                  <dt className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[rgba(148,163,184,0.15)] bg-[#151D2E] text-[#818CF8]">
+                  <dt className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white text-[#4F46E5] dark:border-[rgba(148,163,184,0.15)] dark:bg-[#151D2E] dark:text-[#818CF8]">
                     <Mail className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">Email</span>
                   </dt>
                   <dd>
-                    <span className="block text-xs text-[#94A3B8]">Email</span>
+                    <span className="block text-xs text-slate-500 dark:text-[#94A3B8]">Email</span>
                     <a
                       href={`mailto:${CONTACT_INFO.email}`}
-                      className="text-sm font-medium text-[#F8FAFC] transition-colors hover:text-[#06B6D4]"
+                      className="text-sm font-medium text-slate-900 transition-colors hover:text-[#4F46E5] dark:text-[#F8FAFC] dark:hover:text-[#06B6D4]"
                     >
                       {CONTACT_INFO.email}
                     </a>
@@ -141,9 +143,9 @@ export function ContactSection() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href={`mailto:${CONTACT_INFO.email}`}
-                className="inline-flex min-h-[44px] flex-1 items-center justify-center gap-2 rounded-lg border border-[rgba(148,163,184,0.2)] bg-[#151D2E] px-5 py-2.5 text-sm font-medium text-[#F8FAFC] whitespace-nowrap transition-colors duration-150 hover:border-[#6366F1] hover:bg-[#1E293B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06B6D4]"
+                className="inline-flex min-h-[44px] flex-1 items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-medium text-slate-900 whitespace-nowrap transition-colors duration-150 hover:border-[#6366F1] hover:bg-slate-100 dark:border-[rgba(148,163,184,0.2)] dark:bg-[#151D2E] dark:text-[#F8FAFC] dark:hover:border-[#6366F1] dark:hover:bg-[#1E293B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06B6D4]"
               >
-                <Mail className="h-4 w-4 text-[#818CF8]" aria-hidden="true" />
+                <Mail className="h-4 w-4 text-[#4F46E5] dark:text-[#818CF8]" aria-hidden="true" />
                 <span>Email Me</span>
               </a>
 
@@ -161,36 +163,36 @@ export function ContactSection() {
 
           {/* Right Column: Validated Project Enquiry Form */}
           <div className="lg:col-span-7">
-            <div className="rounded-2xl border border-[rgba(148,163,184,0.15)] bg-[#151D2E] p-6 sm:p-8">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-[rgba(148,163,184,0.15)] dark:bg-[#151D2E] dark:shadow-none sm:p-8">
               {submittedData ? (
                 <div className="space-y-6 py-4" role="status" aria-live="polite">
                   <div className="flex items-start gap-3">
                     <CheckCircle2
-                      className="mt-0.5 h-6 w-6 shrink-0 text-[#34D399]"
+                      className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600 dark:text-[#34D399]"
                       aria-hidden="true"
                     />
                     <div>
-                      <h3 className="font-display text-xl font-bold text-[#F8FAFC]">
+                      <h3 className="font-display text-xl font-bold text-slate-900 dark:text-[#F8FAFC]">
                         Project Brief Prepared
                       </h3>
-                      <p className="mt-1.5 text-sm leading-relaxed text-[#94A3B8]">
+                      <p className="mt-1.5 text-sm leading-relaxed text-slate-600 dark:text-[#94A3B8]">
                         Thank you, {submittedData.name}. Your enquiry details are validated and
                         ready—choose your preferred channel below to send it directly to Shiv Roy.
                       </p>
                     </div>
                   </div>
 
-                  <div className="rounded-xl border border-[rgba(148,163,184,0.12)] bg-[#080B14]/70 p-4 text-sm text-[#94A3B8] space-y-1.5">
+                  <div className="space-y-1.5 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-600 dark:border-[rgba(148,163,184,0.12)] dark:bg-[#080B14]/70 dark:text-[#94A3B8]">
                     <p>
-                      <span className="text-[#F8FAFC] font-medium">Service:</span>{' '}
+                      <span className="font-medium text-slate-900 dark:text-[#F8FAFC]">Service:</span>{' '}
                       {submittedData.service}
                     </p>
                     <p>
-                      <span className="text-[#F8FAFC] font-medium">Email:</span>{' '}
+                      <span className="font-medium text-slate-900 dark:text-[#F8FAFC]">Email:</span>{' '}
                       {submittedData.email}
                     </p>
                     <p>
-                      <span className="text-[#F8FAFC] font-medium">Brief:</span>{' '}
+                      <span className="font-medium text-slate-900 dark:text-[#F8FAFC]">Brief:</span>{' '}
                       {submittedData.message}
                     </p>
                   </div>
@@ -207,9 +209,9 @@ export function ContactSection() {
                     </a>
                     <a
                       href={buildMailtoHref(submittedData)}
-                      className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg border border-[rgba(148,163,184,0.2)] bg-[#101626] px-5 py-2.5 text-sm font-medium text-[#F8FAFC] whitespace-nowrap transition-colors hover:border-[#06B6D4]"
+                      className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-medium text-slate-900 whitespace-nowrap transition-colors hover:border-[#0891B2] dark:border-[rgba(148,163,184,0.2)] dark:bg-[#101626] dark:text-[#F8FAFC] dark:hover:border-[#06B6D4]"
                     >
-                      <Mail className="h-4 w-4 text-[#06B6D4]" aria-hidden="true" />
+                      <Mail className="h-4 w-4 text-[#0891B2] dark:text-[#06B6D4]" aria-hidden="true" />
                       <span>Open in Email App</span>
                     </a>
                     <button
@@ -218,7 +220,7 @@ export function ContactSection() {
                         setSubmittedData(null);
                         setForm(INITIAL_FORM);
                       }}
-                      className="inline-flex min-h-[44px] items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium text-[#94A3B8] transition-colors hover:text-[#F8FAFC]"
+                      className="inline-flex min-h-[44px] items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 dark:text-[#94A3B8] dark:hover:text-[#F8FAFC]"
                     >
                       Edit Enquiry
                     </button>
@@ -227,10 +229,10 @@ export function ContactSection() {
               ) : (
                 <form onSubmit={handleSubmit} noValidate className="space-y-5">
                   <div>
-                    <h3 className="font-display text-xl font-bold text-[#F8FAFC]">
+                    <h3 className="font-display text-xl font-bold text-slate-900 dark:text-[#F8FAFC]">
                       Start a Conversation
                     </h3>
-                    <p className="mt-1 text-sm text-[#94A3B8]">
+                    <p className="mt-1 text-sm text-slate-600 dark:text-[#94A3B8]">
                       Tell me briefly about what you want to build.
                     </p>
                   </div>
@@ -239,7 +241,7 @@ export function ContactSection() {
                     <div>
                       <label
                         htmlFor="contact-name"
-                        className="mb-1.5 block text-xs font-medium text-[#F8FAFC]"
+                        className="mb-1.5 block text-xs font-medium text-slate-900 dark:text-[#F8FAFC]"
                       >
                         Your Name
                       </label>
@@ -256,12 +258,12 @@ export function ContactSection() {
                         placeholder="e.g., Rahul Sharma"
                         aria-invalid={Boolean(errors.name)}
                         aria-describedby={errors.name ? 'contact-name-error' : undefined}
-                        className="min-h-[44px] w-full rounded-lg border border-[rgba(148,163,184,0.2)] bg-[#080B14] px-3.5 py-2.5 text-sm text-[#F8FAFC] placeholder:text-[#94A3B8]/50 focus:border-[#6366F1] focus:outline-none focus:ring-1 focus:ring-[#6366F1]"
+                        className="min-h-[44px] w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#6366F1] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#6366F1] dark:border-[rgba(148,163,184,0.2)] dark:bg-[#080B14] dark:text-[#F8FAFC] dark:placeholder:text-[#94A3B8]/50 dark:focus:bg-[#080B14]"
                       />
                       {errors.name && (
                         <p
                           id="contact-name-error"
-                          className="mt-1.5 flex items-center gap-1.5 text-xs text-rose-400"
+                          className="mt-1.5 flex items-center gap-1.5 text-xs text-rose-600 dark:text-rose-400"
                         >
                           <AlertCircle className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
                           <span>{errors.name}</span>
@@ -272,7 +274,7 @@ export function ContactSection() {
                     <div>
                       <label
                         htmlFor="contact-email"
-                        className="mb-1.5 block text-xs font-medium text-[#F8FAFC]"
+                        className="mb-1.5 block text-xs font-medium text-slate-900 dark:text-[#F8FAFC]"
                       >
                         Email Address
                       </label>
@@ -289,12 +291,12 @@ export function ContactSection() {
                         placeholder="you@example.com"
                         aria-invalid={Boolean(errors.email)}
                         aria-describedby={errors.email ? 'contact-email-error' : undefined}
-                        className="min-h-[44px] w-full rounded-lg border border-[rgba(148,163,184,0.2)] bg-[#080B14] px-3.5 py-2.5 text-sm text-[#F8FAFC] placeholder:text-[#94A3B8]/50 focus:border-[#6366F1] focus:outline-none focus:ring-1 focus:ring-[#6366F1]"
+                        className="min-h-[44px] w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#6366F1] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#6366F1] dark:border-[rgba(148,163,184,0.2)] dark:bg-[#080B14] dark:text-[#F8FAFC] dark:placeholder:text-[#94A3B8]/50 dark:focus:bg-[#080B14]"
                       />
                       {errors.email && (
                         <p
                           id="contact-email-error"
-                          className="mt-1.5 flex items-center gap-1.5 text-xs text-rose-400"
+                          className="mt-1.5 flex items-center gap-1.5 text-xs text-rose-600 dark:text-rose-400"
                         >
                           <AlertCircle className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
                           <span>{errors.email}</span>
@@ -306,7 +308,7 @@ export function ContactSection() {
                   <div>
                     <label
                       htmlFor="contact-service"
-                      className="mb-1.5 block text-xs font-medium text-[#F8FAFC]"
+                      className="mb-1.5 block text-xs font-medium text-slate-900 dark:text-[#F8FAFC]"
                     >
                       What do you need help with?
                     </label>
@@ -315,7 +317,7 @@ export function ContactSection() {
                       name="service"
                       value={form.service}
                       onChange={(e) => setForm({ ...form, service: e.target.value })}
-                      className="min-h-[44px] w-full rounded-lg border border-[rgba(148,163,184,0.2)] bg-[#080B14] px-3.5 py-2.5 text-sm text-[#F8FAFC] focus:border-[#6366F1] focus:outline-none focus:ring-1 focus:ring-[#6366F1]"
+                      className="min-h-[44px] w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm text-slate-900 focus:border-[#6366F1] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#6366F1] dark:border-[rgba(148,163,184,0.2)] dark:bg-[#080B14] dark:text-[#F8FAFC] dark:focus:bg-[#080B14]"
                     >
                       {SERVICES.map((svc) => (
                         <option key={svc.id} value={svc.title}>
@@ -329,7 +331,7 @@ export function ContactSection() {
                   <div>
                     <label
                       htmlFor="contact-message"
-                      className="mb-1.5 block text-xs font-medium text-[#F8FAFC]"
+                      className="mb-1.5 block text-xs font-medium text-slate-900 dark:text-[#F8FAFC]"
                     >
                       Project Requirements
                     </label>
@@ -346,12 +348,12 @@ export function ContactSection() {
                       placeholder="Describe your business, website goals, or web app idea..."
                       aria-invalid={Boolean(errors.message)}
                       aria-describedby={errors.message ? 'contact-message-error' : undefined}
-                      className="w-full rounded-lg border border-[rgba(148,163,184,0.2)] bg-[#080B14] px-3.5 py-2.5 text-sm text-[#F8FAFC] placeholder:text-[#94A3B8]/50 focus:border-[#6366F1] focus:outline-none focus:ring-1 focus:ring-[#6366F1]"
+                      className="w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#6366F1] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#6366F1] dark:border-[rgba(148,163,184,0.2)] dark:bg-[#080B14] dark:text-[#F8FAFC] dark:placeholder:text-[#94A3B8]/50 dark:focus:bg-[#080B14]"
                     />
                     {errors.message && (
                       <p
                         id="contact-message-error"
-                        className="mt-1.5 flex items-center gap-1.5 text-xs text-rose-400"
+                        className="mt-1.5 flex items-center gap-1.5 text-xs text-rose-600 dark:text-rose-400"
                       >
                         <AlertCircle className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
                         <span>{errors.message}</span>
@@ -361,7 +363,7 @@ export function ContactSection() {
 
                   <button
                     type="submit"
-                    className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-lg bg-[#6366F1] px-6 py-3 text-sm font-medium text-white transition-colors duration-150 hover:bg-[#5558E6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06B6D4] focus-visible:ring-offset-2 focus-visible:ring-offset-[#151D2E] sm:w-auto"
+                    className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-lg bg-[#6366F1] px-6 py-3 text-sm font-medium text-white transition-colors duration-150 hover:bg-[#5558E6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06B6D4] focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-[#151D2E] sm:w-auto"
                   >
                     <Send className="h-4 w-4" aria-hidden="true" />
                     <span>Continue with Project Brief</span>

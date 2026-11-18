@@ -12,18 +12,20 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="border-b border-[rgba(148,163,184,0.12)] bg-[#101626]/45 py-20 lg:py-24"
+      className="border-b border-slate-200 bg-slate-50 py-20 dark:border-[rgba(148,163,184,0.12)] dark:bg-[#101626]/45 lg:py-24"
     >
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-12">
           {/* Left Column: Narrative & Career Objective */}
           <div className="lg:col-span-6">
-            <p className="text-sm font-semibold tracking-wide text-[#06B6D4]">About Me</p>
-            <h2 className="font-display mt-2 text-balance text-3xl font-bold tracking-tight text-[#F8FAFC] sm:text-4xl">
+            <p className="text-sm font-semibold tracking-wide text-[#0891B2] dark:text-[#06B6D4]">
+              About Me
+            </p>
+            <h2 className="font-display mt-2 text-balance text-3xl font-bold tracking-tight text-slate-900 dark:text-[#F8FAFC] sm:text-4xl">
               Building Digital Experiences with AI &amp; Creativity.
             </h2>
 
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-[#94A3B8]">
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-slate-600 dark:text-[#94A3B8]">
               <p>
                 I am Shiv Roy, a GenAI practitioner and web developer based in Patna, Bihar, India.
               </p>
@@ -42,9 +44,11 @@ export function AboutSection() {
             </div>
 
             {/* Career Objective Box (hairline border, no thick left bar) */}
-            <div className="mt-8 rounded-xl border border-[rgba(148,163,184,0.15)] bg-[#151D2E]/80 p-5 sm:p-6">
-              <p className="font-display text-sm font-semibold text-[#F8FAFC]">Career Objective</p>
-              <p className="mt-2 text-sm leading-relaxed text-[#94A3B8]">
+            <div className="mt-8 rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-[rgba(148,163,184,0.15)] dark:bg-[#151D2E]/80 dark:shadow-none sm:p-6">
+              <p className="font-display text-sm font-semibold text-slate-900 dark:text-[#F8FAFC]">
+                Career Objective
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-[#94A3B8]">
                 To leverage my experience in Generative AI and modern web development to build
                 practical, high-converting digital solutions for local enterprises, helping
                 businesses establish their online presence and grow with minimal friction.
@@ -60,22 +64,22 @@ export function AboutSection() {
                 return (
                   <article
                     key={item.id}
-                    className="flex flex-col justify-between rounded-xl border border-[rgba(148,163,184,0.15)] bg-[#151D2E] p-6 transition-transform duration-200 hover:-translate-y-0.5 hover:border-[#6366F1]/40"
+                    className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-transform duration-200 hover:-translate-y-0.5 hover:border-[#6366F1]/50 dark:border-[rgba(148,163,184,0.15)] dark:bg-[#151D2E] dark:shadow-none dark:hover:border-[#6366F1]/40"
                   >
                     <div>
-                      <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#6366F1]/12 text-[#818CF8]">
+                      <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#6366F1]/10 text-[#4F46E5] dark:bg-[#6366F1]/12 dark:text-[#818CF8]">
                         <Icon className="h-5 w-5" aria-hidden="true" />
                       </div>
-                      <h3 className="font-display mt-4 text-lg font-semibold text-[#F8FAFC]">
+                      <h3 className="font-display mt-4 text-lg font-semibold text-slate-900 dark:text-[#F8FAFC]">
                         {item.title}
                       </h3>
                     </div>
 
-                    <ul className="mt-4 space-y-2 border-t border-[rgba(148,163,184,0.12)] pt-4 text-sm text-[#94A3B8]">
+                    <ul className="mt-4 space-y-2 border-t border-slate-200 pt-4 text-sm text-slate-600 dark:border-[rgba(148,163,184,0.12)] dark:text-[#94A3B8]">
                       {item.points.map((point) => (
                         <li key={point} className="flex items-center gap-2">
                           <span
-                            className="h-1 w-1 shrink-0 rounded-full bg-[#06B6D4]"
+                            className="h-1 w-1 shrink-0 rounded-full bg-[#0891B2] dark:bg-[#06B6D4]"
                             aria-hidden="true"
                           />
                           <span>{point}</span>

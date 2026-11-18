@@ -1,8 +1,20 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('ssr-theme');
+          if (saved === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <title>Shiv Roy | AI &amp; Vibe Coding Web Developer</title>
     <meta
       name="description"
@@ -72,7 +84,7 @@
       }
     </script>
   </head>
-  <body class="bg-[#080B14] text-[#F8FAFC] antialiased selection:bg-[#6366F1]/30 selection:text-[#F8FAFC]">
+  <body class="bg-[#FFFFFF] text-[#0F172A] dark:bg-[#080B14] dark:text-[#F8FAFC] antialiased selection:bg-[#6366F1]/25">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
